@@ -152,7 +152,7 @@ function validate() {
     thead.innerHTML = ""
     tbody.innerHTML = ""
 
-    const iban = document.getElementById("iban").value.replace(" ", "").toUpperCase()
+    const iban = document.getElementById("iban").value.replaceAll(" ", "")
     const bankCode = iban.substr(4, 2)
     const accNumber = String(Number(iban.substr(6))) // remove leading zeros
     const branch = accNumber.substr(0, 3)
